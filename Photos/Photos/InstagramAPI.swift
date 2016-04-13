@@ -7,33 +7,29 @@
 //
 
 import Foundation
+import UIKit
 
 class InstagramAPI {
     /* Connects with the Instagram API and pulls resources from the server. */
-    func loadPhotos(completion: (([Photo]) -> Void)!) {
-        /* 
-         * 1. Get the endpoint URL to the popular photos 
-         *    HINT: Look in Utils
-         * 2. Create a Session
-         * 3. Create a Data Task with a URL and completionHandler
-         *    If no error:
-         *       a. Get NSDictionary from the JSON object, from key the "photos"
-         *       b. Create Array of NSDictionaries (one NSDictionary for each photo)
-         *       c. For each NSDictionary, create a Photo object, and add to Photos array
-         *       d. Wait for completion of Photos array
-         */
-        // FILL ME IN
+    func loadPhotos(search: String, completion: (([Photo]) -> Void)!) {
         var url: NSURL
-
+        if search.isEmpty {
+            url = Utils.getPopularURL()
+        } else {
+            url = Utils.getHashtagURL(search)
+        }
+        
         let task = NSURLSession.sharedSession().dataTaskWithURL(url) {
             (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
             if error == nil {
-                //FIX ME
-                var photos: [Photo]!
+                var photos = [Photo]()
                 do {
                     let feedDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
-                    // FILL ME IN, REMEMBER TO USE FORCED DOWNCASTING
+                    let dataValues = feedDictionary.valueForKey("data") as! [NSDictionary]
                     
+                    for keys in dataValues {
+                        photos.append(Photo(data: keys))
+                    }
                     
                     // DO NOT CHANGE BELOW
                     let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
@@ -49,4 +45,50 @@ class InstagramAPI {
         }
         task.resume()
     }
+    
+    func loadThumbnail(photo: Photo, cell: PhotosCollectionViewCell, completion: ((PhotosCollectionViewCell, UIImage) -> Void)!) {
+        let loadURL = NSURL(string: photo.url_thumbnail)!
+        NSURLSession.sharedSession().dataTaskWithURL(loadURL) {
+            (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
+            if error == nil {
+                var thumbnailImage: UIImage
+                do {
+                    thumbnailImage = UIImage(data: data!)!
+                    
+                    let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+                    dispatch_async(dispatch_get_global_queue(priority, 0)) {
+                        dispatch_async(dispatch_get_main_queue()) {
+                            completion(cell, thumbnailImage)
+                        }
+                    }
+                } catch let error as NSError {
+                    print("ERROR: \(error.localizedDescription)")
+                }
+            }
+            }.resume()
+    }
+    
+    func loadLargeImage(photo: Photo, detailVC: DetailViewController, completion: ((DetailViewController, UIImage) -> Void)!) {
+        let url = (photo.url_large as NSString).stringByReplacingOccurrencesOfString("s640x640/sh0.08/e35/", withString: "")
+        let loadURL = NSURL(string: url)!
+        NSURLSession.sharedSession().dataTaskWithURL(loadURL) {
+            (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
+            if error == nil {
+                var largeImage: UIImage
+                do {
+                    largeImage = UIImage(data: data!)!
+                    
+                    let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+                    dispatch_async(dispatch_get_global_queue(priority, 0)) {
+                        dispatch_async(dispatch_get_main_queue()) {
+                            completion(detailVC, largeImage)
+                        }
+                    }
+                } catch let error as NSError {
+                    print("ERROR: \(error.localizedDescription)")
+                }
+            }
+            }.resume()
+    }
+    
 }

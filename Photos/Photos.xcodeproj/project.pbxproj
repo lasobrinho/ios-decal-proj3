@@ -8,26 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		3A1683901BE9B642009F39C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A16838F1BE9B642009F39C5 /* AppDelegate.swift */; };
-		3A1683921BE9B642009F39C5 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1683911BE9B642009F39C5 /* PhotosCollectionViewController.swift */; };
-		3A1683951BE9B642009F39C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A1683931BE9B642009F39C5 /* Main.storyboard */; };
 		3A1683971BE9B642009F39C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A1683961BE9B642009F39C5 /* Assets.xcassets */; };
 		3A16839A1BE9B642009F39C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A1683981BE9B642009F39C5 /* LaunchScreen.storyboard */; };
 		3A1683A31BE9B717009F39C5 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1683A21BE9B717009F39C5 /* Utils.swift */; };
 		3A1683A71BE9C593009F39C5 /* InstagramAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1683A61BE9C593009F39C5 /* InstagramAPI.swift */; };
 		3A1683A91BE9C5A7009F39C5 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1683A81BE9C5A7009F39C5 /* Photo.swift */; };
+		A01D8DF31CB9E5BF00C99C00 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01D8DF21CB9E5BF00C99C00 /* PhotosCollectionViewController.swift */; };
+		A01D8DF51CB9E60A00C99C00 /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01D8DF41CB9E60A00C99C00 /* PhotosCollectionViewCell.swift */; };
+		A01D8DF91CBA11B100C99C00 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01D8DF81CBA11B100C99C00 /* DetailViewController.swift */; };
+		A062D8F81CBB80F9004D4DF4 /* heart-icon-liked.png in Resources */ = {isa = PBXBuildFile; fileRef = A062D8F71CBB80F9004D4DF4 /* heart-icon-liked.png */; };
+		A08CB1041CBCE5D800247183 /* heart-icon-notliked.png in Resources */ = {isa = PBXBuildFile; fileRef = A08CB1031CBCE5D800247183 /* heart-icon-notliked.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3A16838C1BE9B641009F39C5 /* Photos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A16838F1BE9B642009F39C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3A1683911BE9B642009F39C5 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
-		3A1683941BE9B642009F39C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A1683961BE9B642009F39C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A1683991BE9B642009F39C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A16839B1BE9B642009F39C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A1683A21BE9B717009F39C5 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		3A1683A61BE9C593009F39C5 /* InstagramAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramAPI.swift; sourceTree = "<group>"; };
 		3A1683A81BE9C5A7009F39C5 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		A01D8DF21CB9E5BF00C99C00 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		A01D8DF41CB9E60A00C99C00 /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
+		A01D8DF81CBA11B100C99C00 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A062D8F71CBB80F9004D4DF4 /* heart-icon-liked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart-icon-liked.png"; sourceTree = "<group>"; };
+		A08CB1031CBCE5D800247183 /* heart-icon-notliked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart-icon-notliked.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +70,6 @@
 				3A1683A41BE9C548009F39C5 /* Views */,
 				3A1683A11BE9B70C009F39C5 /* Utils */,
 				3A16838F1BE9B642009F39C5 /* AppDelegate.swift */,
-				3A1683931BE9B642009F39C5 /* Main.storyboard */,
 				3A1683961BE9B642009F39C5 /* Assets.xcassets */,
 				3A1683981BE9B642009F39C5 /* LaunchScreen.storyboard */,
 				3A16839B1BE9B642009F39C5 /* Info.plist */,
@@ -83,7 +88,11 @@
 		3A1683A41BE9C548009F39C5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3A1683911BE9B642009F39C5 /* PhotosCollectionViewController.swift */,
+				A062D8F71CBB80F9004D4DF4 /* heart-icon-liked.png */,
+				A08CB1031CBCE5D800247183 /* heart-icon-notliked.png */,
+				A01D8DF21CB9E5BF00C99C00 /* PhotosCollectionViewController.swift */,
+				A01D8DF41CB9E60A00C99C00 /* PhotosCollectionViewCell.swift */,
+				A01D8DF81CBA11B100C99C00 /* DetailViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -156,8 +165,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A16839A1BE9B642009F39C5 /* LaunchScreen.storyboard in Resources */,
+				A062D8F81CBB80F9004D4DF4 /* heart-icon-liked.png in Resources */,
 				3A1683971BE9B642009F39C5 /* Assets.xcassets in Resources */,
-				3A1683951BE9B642009F39C5 /* Main.storyboard in Resources */,
+				A08CB1041CBCE5D800247183 /* heart-icon-notliked.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,10 +178,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A1683921BE9B642009F39C5 /* PhotosCollectionViewController.swift in Sources */,
+				A01D8DF31CB9E5BF00C99C00 /* PhotosCollectionViewController.swift in Sources */,
 				3A1683901BE9B642009F39C5 /* AppDelegate.swift in Sources */,
+				A01D8DF51CB9E60A00C99C00 /* PhotosCollectionViewCell.swift in Sources */,
 				3A1683A31BE9B717009F39C5 /* Utils.swift in Sources */,
 				3A1683A71BE9C593009F39C5 /* InstagramAPI.swift in Sources */,
+				A01D8DF91CBA11B100C99C00 /* DetailViewController.swift in Sources */,
 				3A1683A91BE9C5A7009F39C5 /* Photo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,14 +191,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3A1683931BE9B642009F39C5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3A1683941BE9B642009F39C5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3A1683981BE9B642009F39C5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -287,6 +291,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "iOS-DeCal.Photos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -298,6 +303,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "iOS-DeCal.Photos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

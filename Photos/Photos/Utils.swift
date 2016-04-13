@@ -24,7 +24,9 @@ class Utils {
     
     class func getHashtagURL(hashtag: String) -> NSURL {
         let cid = clientID()
-        let urlStr = "https://api.instagram.com/v1/tags/\(hashtag)/media/recent?client_id=\(cid)"
+        let newHashtag = hashtag.stringByReplacingOccurrencesOfString(" ", withString: "")
+        let urlStr = "https://api.instagram.com/v1/tags/\(newHashtag)/media/recent?client_id=\(cid)"
         return NSURL(string: urlStr)!
     }
+    
 }
